@@ -1,24 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
-
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Index from './Components/Index';
+import Navbar from './Components/Navbar';
+import Overview from './Components/Overview';
+import Music from './Components/Music';
+import Videos from './Components/Videos';
+import Entertainment from './Components/Entertainment';
+import GiftCards from './Components/GiftCards';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route exact path='/'>
+              <Index />
+          </Route>
+          <Route exact path='/overview'>
+              <Overview />
+          </Route>
+          <Route exact path='/music'>
+              <Music />
+          </Route>
+          <Route exact path='/videos'>
+              <Videos />
+          </Route>
+          <Route exact path='/entertainment'>
+              <Entertainment />
+          </Route>
+          <Route exact path='/giftcards'>
+              <GiftCards />
+          </Route>
+        </Switch>
+      </Router>
+    </>
   );
 }
 

@@ -1,38 +1,401 @@
-.App {
+html, body{
+  font-family: 'Times New Roman', Times, serif;
+  margin:0px;
+  overflow-x:hidden;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/* Navbar CSS */
+#navbar{
+  display: flex;
+  background-color: #545454;
+  position:fixed;
+  width:100%;
+  z-index:99;
+}
+#navbrand{
+  flex:1;
+}
+#menu_link{
+  list-style: none;
+  display: inline-block;
+  margin:0px;
+  padding:0px;
+  position: relative;
+  left: 50%;
+  transform:translateX(-50%);
+}
+.list-items{
+  display: inline-block;
+  padding:20px;
+}
+.list-itemsText{
+  font-size:18px;
+  font-weight:550;
+  color:#f5f5f5;
+  cursor:pointer;
+}
+.list-itemsText:hover{
+  color:#cfcccc;
+}
+/* Navbar CSS Ends Here */
+
+/* Overview CSS */
+#overview{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background-image: url(./Images/overviewImage.jpeg);
+  background-color:#000000;
+  background-size:cover;
+  background-position:center;
+}
+/* Overview Ends here */
+
+/* Sections CSS */
+#sections{
+  position:absolute;
+  top:100%;
+  width:100%;
+  height:auto;
+  border:1px solid transparent;
+}
+/* Music CSS Starts here */
+#music{
+  background-color: #333333;
+  border:1px solid transparent;
+  color:#f5f5f5;
+}
+#musicTitle{
+  margin-top:80px;
+  font-size: 50px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#musicSubTitle{
+  font-size: 32px;
+  text-align: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#musicText{
+  font-size:20px;
+  text-align: center;
+  padding: 0px 150px;
+  line-height: 25px;
 }
+#musicButton{
+  margin:20px 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  padding: 10px;
+  line-height: 36px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #ac0a0a;
+  color: #f5f5f5;
+  cursor: pointer;
+}
+#musicButton:hover{
+  opacity:0.8;
+}
+#musicSubText{
+  font-size:18px;
+  text-align: center;
+  opacity:0.7;
+}
+#musicImageContainer{
+  margin-bottom:25px;
+}
+#musicImage{
+  object-fit: contain;
+  width:100%;
+}
+/* Music CSS Ends */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Videos CSS */
+#videos{
+  border:1px solid transparent;
+}
+#videosTitle{
+  margin-top: 80px;
+  font-size: 50px;
+  padding: 0px 150px; 
+  text-align: center;
+}
+#videosText{
+  font-size:18px;
+  line-height: 25px;
+  padding: 0px 150px; 
+  text-align: center;
+}
+#videosButton{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2929ff;
+  border: none;
+  border-radius: 3px;
+  font-size: 18px;
+  line-height: 36px;
+  color: #f5f5f5;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-bottom:40px;
+}
+#videosButton:hover{
+  opacity:0.8;
+}
+#videosImageContainer{
+  width:80%;
+  margin:auto;
+  margin-bottom:25px;
+}
+#videosImage{
+  object-fit: contain;
+  width:100%;
+}
+/* Videos CSS Ends */
+
+/* Entertainment CSS */
+#entertainment{
+  height:600px;
+  background-image: url(./Images/entertainmentImage.jpeg);
+  background-size: cover;
+  border:1px solid transparent;
+}
+/* Entertainment CSS */
+
+/* GiftCards CSS */
+#giftCards{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+#giftCardsImageSection{
+  flex:1;
+  margin:60px 0px;
 }
+#giftCardsImageContainer{
+  width:80%;
+  float:right;
+  position:relative;
+  top:50%;
+  transform:translateY(-50%);
+}
+#giftCardsImage{
+  object-fit: contain;
+  width:100%;
+}
+#giftCardsTextSection{
+  flex:1;
+  margin:60px 0px;
+}
+#giftCardsTextContainer{
+  width:80%;
+}
+#giftCardsText{
+  text-align: left;
+  font-size:18px;
+  line-height: 25px;
+}
+#giftCardsSubText{
+  font-size: 20px;
+}
+#giftCardsButton{
+  margin:10px 0px;
+  background-color: #ff19ba;
+  border: none;
+  border-radius: 3px;
+  font-size: 18px;
+  line-height: 36px;
+  color: #f5f5f5;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+#giftCardsButton:hover{
+  opacity:0.8;
+}
+/* GiftCards CSS */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Footer CSS */
+#footer{
+  background-color:#252529;
+  display: flex;
+}
+.footerLinks{
+  margin:0px 5px;
+  flex:1;
+}
+.linkTitle{
+  padding-top: 10px;
+  font-size: 18px;
+  color: #f5f5f5;
+  margin: 0px;
+  text-align: center;
+}
+.linksContainer{
+  list-style: none;
+  padding:0px;
+}
+.link-item{
+  text-align: center;
+  margin-bottom: 5px;
+}
+.links{
+  text-decoration: none;
+  color:#929292;
+}
+.links:hover{
+  color:#d4d4d4;
+}
+#copyright{
+  margin:0px;
+  background-color: #545454;
+  font-size: 18px;
+  color:#f5f5f5;
+  text-align: center;
+  padding:10px 0px;
+}
+/* Footer CSS */
+
+
+/* Utilities */
+.bg-textSection{
+  position: relative;
+  top:40%;
+  transform: translateY(-40%);
+  text-align: center;
+  color:#f5f5f5;
+}
+.bg-title{
+  font-size: 50px;
+}
+.bg-subTitle{
+  font-size: 32px;
+}
+.bg-text{
+  font-size: 20px;
+  padding: 0px 150px;
+  line-height: 25px;
+}
+/* Utilities */
+
+@media screen and (max-width : 768px) {
+  #navbrand{
+    display:none;
   }
-  to {
-    transform: rotate(360deg);
+  #mobileNavbrand{
+    font-size: 20px;
+    padding-left:10px;
+    color:#f5f5f5;
   }
+  #mobileNavIcon{
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color:#f5f5f5;
+    float:right;
+    margin-right:10px;
+    cursor:pointer;
+  }
+  #sideMenuBar{
+    position:fixed;
+    background-color:#252529;
+    border:1px solid #cfcccc;
+    width:100%;
+    height:100%;
+    z-index:999;
+  }
+  #mobileNavbarFirstSection{
+    flex:1;
+  }
+  #mobileNavbarSecondSection{
+    flex:1;
+  }
+  #closeIcon{
+    color:#f5f5f5;
+    font-size: 20px;
+    float: right;
+    margin:15px;
+    cursor:pointer;
+  }
+  #sideMenuLinkContainer{
+    list-style: none;
+    padding:0;
+    text-align: center;
+  }
+  .sideMenu-list-items{
+    margin:50px 0px;
+  }
+  .sidelist-itemsText{
+    color: #f5f5f5;
+    font-size: 20px;
+  }
+  .bg-title{
+    font-size: 40px;
+    padding:0 5px;
+  }
+  .bg-subTitle{
+    font-size: 24px;
+  }
+  .bg-text{
+    font-size: 18px;
+    padding: 0px 10px;
+    line-height: 25px;
+  }
+  #musicTitle{
+    font-size: 40px;
+  }
+  #musicSubTitle{
+    font-size: 24px;
+  }
+  #musicText{
+    font-size: 18px;
+    padding: 0px 10px;
+    line-height: 25px;
+  }
+  #videosTitle{
+    font-size: 40px;
+    padding:0px 10px;
+  }
+  #videosText{
+    font-size: 18px;
+    padding: 0px 10px;
+    line-height: 25px;
+  }
+  #giftCardsText{
+    font-size: 16px;
+  }
+  #giftCardsSubText{
+    font: 18px;
+  }
+}
+@media screen and (min-width: 768px) {
+ #mobileNavbarFirstSection{
+   display:none;
+ } 
+ #mobileNavbarSecondSection{
+   display: none;
+ }
+ #sideMenuBar{
+   display: none;
+ }
 }
